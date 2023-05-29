@@ -6,7 +6,7 @@ This is a Django app for backend and frontend used HTMX and Tailwind CSS, to con
 
 - Python 3.9
 - Dependencies (from the repository root folder)
-  - `pip install -r requirements`
+  - `pip install -r requirements.txt`
 
 ## Running locally
 
