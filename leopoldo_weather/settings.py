@@ -26,7 +26,7 @@ SECRET_KEY = 'django-insecure--qtz2&u!f2g%c7%xy*yc%&@*zw88smipeay4e8dltxtaeii3is
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOST = ['*']
 
 
 # Application definition
@@ -130,3 +130,6 @@ WEATHERSTACK_API = {
         "http://api.weatherstack.com/current"
     ),
 }
+
+STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static')]
+STATIC_ROOT =os.path.join(BASE_DIR, 'staticfiles')
