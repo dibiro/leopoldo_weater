@@ -28,6 +28,7 @@ DEBUG = False
 
 ALLOWED_HOST = [
     "leopoldoweater-production.up.railway.app",
+    "*.up.railway.app",
     "*",
 ]
 
