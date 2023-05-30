@@ -17,11 +17,11 @@ def get_weather(city_name: str):
     requests
         resquests intances
     """
-    url = (
-        f'{settings.WEATHERSTACK_API["WEATHERSTACK_API_URL"]}'
-        f'?access_key={settings.WEATHERSTACK_API["WEATHERSTACK_API_KEY"]}'
-        f'&query={city_name}&forecast_days=1&hourly=1'
-    )
-    weatherstack_response = requests.get(url)
+    params = {
+        'access_key': settings.WEATHERSTACK_API["WEATHERSTACK_API_KEY"],
+        'query': city_name
+    }
+    url = settings.WEATHERSTACK_API["WEATHERSTACK_API_URL"]
+    weatherstack_response = requests.get(url, params)
     
     return weatherstack_response
